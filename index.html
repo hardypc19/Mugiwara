@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0b0b0d" />
+<title>Mugiwara — Graphic Streetwear</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="announcement">Use Code <b>“JOINCLUB”</b> for 5% off</div>
+<header class="header">
+  <button class="icon-btn glass-icon" id="menuBtn" aria-label="Open menu" title="Menu"><span class="hamburger">☰</span></button>
+  <button class="icon-btn glass-icon" id="searchBtn" aria-label="Search" title="Search">⌕</button>
+  <a class="brand" href="#" aria-label="Mugiwara home"><div class="logo-orbit"><img id="logoImage" src="./logo.png" alt="Your logo" onerror="this.style.display='none';document.getElementById('logoFallback').style.display='grid'"><span id="logoFallback">GC</span></div></a>
+  <button class="icon-btn glass-icon" id="accountBtn" aria-label="Account" title="Account">♙</button>
+  <button class="icon-btn glass-icon" id="cartBtn" aria-label="Shopping bag" title="Shopping bag">♧<i id="cartCount">0</i></button>
+</header>
+<aside class="drawer" id="drawer">
+ <button class="close" id="closeDrawer">×</button>
+ <a href="#home">Home</a><a href="#shop">Shop</a><a href="#categories">Categories <span>→</span></a><a href="#about">About Us</a>
+ <div class="drawer-note">Dark fits. Loud graphics.</div>
+</aside>
+<div class="scrim" id="scrim"></div>
+<main>
+<section class="hero" id="home">
+ <img src="./images/hero.jpg" alt="" class="hero-image">
+ <div class="hero-shade"></div>
+ <div class="hero-copy"><p class="eyebrow">BUILT FOR THE UNORDINARY</p><h1>Wear your<br><em>own energy.</em></h1><p>Graphic tees for the ones who never blend in.</p><a class="pill-btn" href="#shop">Shop the drop <span>↗</span></a></div>
+ <div class="hero-index">01 <span>/</span> 03</div>
+</section>
+<div class="ticker"><div>OVERSIZED TEES ✳ GRAPHIC STREETWEAR ✳ MADE TO STAND OUT ✳ OVERSIZED TEES ✳ GRAPHIC STREETWEAR ✳ MADE TO STAND OUT ✳</div></div>
+<section class="section" id="categories">
+ <div class="section-head"><div><p class="eyebrow">FIND YOUR FIT</p><h2>Categories<span class="pink">.</span></h2></div><span class="tiny-note">01 collection</span></div>
+ <a class="category-card" href="#shop"><img src="./images/hero.jpg" alt="Oversized T-shirts"><div><span>01 / CURRENT COLLECTION</span><h3>Oversize T-shirts</h3><p>Graphic-heavy. Everyday-ready. <b>Explore ↗</b></p></div></a>
+</section>
+<section class="section products-section" id="shop">
+ <div class="section-head"><div><p class="eyebrow">THE CURRENT DROP</p><h2>Graphic essentials<span class="pink">.</span></h2></div><span class="tiny-note" id="productCount">11 pieces</span></div>
+ <div class="filters"><button class="filter active">All tees</button><span>REGULAR FIT / GRAPHIC PRINTS</span></div>
+ <div class="product-grid" id="productGrid"></div>
+ <button class="outline-btn" id="viewAll">View all products <span>↓</span></button>
+</section>
+<section class="manifesto" id="about"><div class="manifesto-mark">GC<span>®</span></div><p class="eyebrow">NOT MADE TO FIT IN</p><h2>Make your<br><em>presence</em> felt.</h2><p>Statement graphics, dark palettes and a little bit of chaos. Welcome to Mugiwara.</p><a href="#shop" class="text-link">Find your next tee ↗</a></section>
+<section class="faq section" id="faq"><div class="section-head"><div><p class="eyebrow">THE DETAILS</p><h2>FAQs<span class="pink">.</span></h2></div><span class="tiny-note">GOOD TO KNOW</span></div>
+ <div class="faq-list">
+  <details><summary><span>When will my order arrive?</span><b>＋</b></summary><p>Orders are usually delivered within 4–7 business days after dispatch. Update this answer to match your shipping timeline.</p></details>
+  <details><summary><span>Do you ship all over India?</span><b>＋</b></summary><p>Yes, we aim to ship across India wherever our delivery partners service. Edit this text with your final shipping policy.</p></details>
+  <details><summary><span>What payment methods are available?</span><b>＋</b></summary><p>UPI, cards, net banking and other methods may be available at checkout depending on your payment provider. Replace this with your actual options.</p></details>
+  <details><summary><span>Do you offer returns, refunds or exchanges?</span><b>＋</b></summary><p>Returns and exchanges depend on the policy you set for your store. Add your exact return window, eligibility and process here.</p></details>
+ </div>
+</section>
+<section class="newsletter"><p class="eyebrow">STAY IN THE LOOP</p><h2>Get on the list<span class="pink">.</span></h2><p>New drops. Fresh graphics. No noise.</p><form id="subscribe"><input type="email" placeholder="Your email address" required><button aria-label="Subscribe">→</button></form><small id="subscribeMsg"></small></section>
+</main>
+<footer><div class="footer-brand">MUGIWARA<span>®</span></div><div class="footer-links"><a href="#faq">FAQs</a><a href="#about">About</a><a href="#contact">Contact</a><a href="#policies">Shipping policy</a></div><p>© 2026 Mugiwara. Built for your next favourite fit.</p></footer>
+<div class="toast" id="toast"></div>
+
+<dialog id="productDialog"><form method="dialog" class="product-modal"><button class="close">×</button><div id="productDetails"></div></form></dialog>
+<dialog id="searchDialog"><form method="dialog" class="search-form"><button class="close">×</button><p class="eyebrow">FIND YOUR FIT</p><input id="searchInput" placeholder="Search graphic tees…" autocomplete="off"><div id="searchResults"></div></form></dialog>
+<dialog id="cartDialog"><form method="dialog" class="cart-modal"><button class="close">×</button><p class="eyebrow">YOUR BAG</p><h2>Shopping bag</h2><div id="cartItems">Your bag is empty.</div><div class="cart-total" id="cartTotal"></div><button type="button" class="pill-btn full" id="checkoutBtn">Checkout <span>↗</span></button><p class="muted">Demo storefront: connect a checkout/payment provider before taking real orders.</p></form></dialog>
+<script src="./app.js"></script>
+</body></html>
